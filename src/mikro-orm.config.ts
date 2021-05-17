@@ -3,17 +3,17 @@ import {Post} from "./entities/Post";
 import { __prod__ } from "./constants";
 import path from "path";
 
-console.log('dirname: ', __dirname);
 export default {
 
     migrations: {
         path: path.join(__dirname,"./migrations"),
         patter: /^[/w-] + \d+\.[tj]s$/,
     },
-    entities: [Post],
-    username: 'thuc',
-    dbName: 'myportfolio-dev',
-    type : 'postgresql',
+    entities:[Post],
+    dbName: "ts-server",
+    user: "thuc",
+    password: "4123",
+    type : "postgresql",
     debug: !__prod__,
 
     } as Parameters<typeof MikroORM.init>[0];
