@@ -14,7 +14,7 @@ export class Post{
 
     @Field(() => String)
     @Property ({type: "date", onUpdate :() => new Date()})
-    updateAT = new Date();
+    updateAt = new Date();
 
     @Field(() => String)
     @Property ({type: "text"})

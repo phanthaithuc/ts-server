@@ -1,9 +1,9 @@
 import "reflect-metadata"
 import { MikroORM } from "@mikro-orm/core"
 import { __prod__ } from "./constants";
-import { Post } from "./entities/Post";
 import microConfig from "./mikro-orm.config";
 import express from "express";
+import { Post } from "./entities/Post";
 import {ApolloServer} from 'apollo-server-express';
 import {buildSchema} from 'type-graphql'
 import { HelloResolver } from "./resolvers/hello";
@@ -13,7 +13,7 @@ const main = async() => {
     const orm = await MikroORM.init(microConfig);
     await orm.getMigrator().up();
 
-    // const post = orm.em.create(Post, {title: "My first post"});
+    // const post = orm.em.create(Post, {title: "My second post"});
     // await orm.em.persistAndFlush(post);
 
     // await orm.em.nativeInsert(Post, {title: "My second post"});
