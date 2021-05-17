@@ -10,10 +10,10 @@ export default {
         patter: /^[/w-] + \d+\.[tj]s$/,
     },
     entities:[Post],
-    dbName: "ts-server",
-    user: "thuc",
-    password: "4123",
-    type : "postgresql",
+    dbName: "tutorial",
+    user: "root",
+    password: "13060491t",
+    type : "mysql",
     debug: !__prod__,
 
     } as Parameters<typeof MikroORM.init>[0];
