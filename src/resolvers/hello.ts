@@ -1,25 +1,12 @@
+import { Resolver, Query } from "type-graphql";
 
-import {Resolver, Query} from 'type-graphql';
-
+// The resolver for testing
 @Resolver()
 export class HelloResolver {
-    //Query return type
-    @Query(() => String) 
-    hello() {
-        return "hello dogs"
-    }
-
-    // @Query(() => [Post])
-    // posts( @Ctx() {em}: MyContext ): Promise<Post[]>{
-    //         return em.find(Post, {});
-    //     }
-
-    // @Query(() => Post, {nullable : true})
-
-    // post( 
-    //     @Arg('id', () => Int) id: number,
-    //     @Ctx() {em}: MyContext ): Promise<Post | null>{
-    //         return em.findOne(Post, {id});
-    //     }
-
+  // The resolver methods can be mutation or query
+  // This example is a query method (just return a string)
+  @Query(() => String) // we can declare what the query returns
+  hello() {
+    return "Hello, World from Hello Graphql Resolver";
+  }
 }
